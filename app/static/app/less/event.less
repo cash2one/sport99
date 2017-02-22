@@ -1,0 +1,557 @@
+
+.half_btn{
+    display: inline-block;
+    left: 0px;
+    height: 44px;
+    width: 49%;
+    text-align: center;
+}
+.half_btn_selected{
+    background-color: #FF9800;
+}
+#event_create{
+    header{
+        position: relative;
+        min-height: 120px;
+        border-bottom: solid 1px rgb(251, 251, 251);
+        background-color: #fff;
+        .add_club{
+            position: relative;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+
+            p{
+                padding: 10px;
+            }
+            .plus{
+                font-size: 30px;
+            }
+        }
+
+        .club_info{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            padding: 20px 15px;
+            color: #fff;
+            z-index: 10;
+            background-color: @background-color-enable;
+            .name{
+                position: absolute;
+                top: 30px;
+                left: 108px;
+            }
+            img{
+                position: relative;
+                width: 80px;
+                height: 80px;
+                border-radius: 40px;
+            }
+            .tags{
+                position: absolute;
+                left: 110px;
+                top: 65px;
+                font-size: 12px;
+                color: #fff;
+                span{
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+    .time_type{
+        background-color: @background-color;
+    }
+    .days{
+        padding: 10px;
+        background: #fff;
+        margin-top: 15px;
+    }
+    .location_line{
+        position: relative;
+        input{
+            padding-left: 65px;
+        }
+    }
+    .location_icon{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 60px;
+        color: #fff;
+        background-color: #FFD15D;
+        font-size: 18px;
+        text-align: center;
+        line-height: 44px;
+        height: 44px;
+        margin-top: 5px;
+    }
+    .fee_input{
+        width: 67%;
+        padding: 12px 10px;
+        border: none;
+        border-radius: 1px;
+        margin: 5px 0px;
+    }
+    .aa{
+        position: relative;
+        top: 0px;
+        display: inline-block;
+        width: 30%;
+        padding: 12px;
+        text-align: center;
+        background-color: #fff;
+        margin: 5px 0px;
+    }
+    .goushi_line{
+        position: relative;
+        top: 10px;
+        height: 80px;
+        margin: 5px 0px;
+        .left_part{
+            position: absolute;
+            top: 0px;
+            padding: 0px;
+            left: 0px;
+            width: 48%;
+            input{
+                padding: 12px 10px;
+                border: none;
+                width: 100%;
+                border-radius: 0px;
+            }
+        }
+        .right_part{
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 50%;
+            padding: 0px;
+            input{
+                padding: 12px 10px;
+                border: none;
+                width: 100%;
+                border-radius: 0px;
+            }
+        }
+    }
+    .qq_list{
+        li{
+            padding: 12px;
+            margin-bottom: 5px;
+            background-color: #fff;
+            a{
+                float: right;
+            }
+        }
+    }
+    .bind_qq{
+        position: relative;
+        padding: 12px;
+        padding-left: 65px;
+        margin-bottom: 10px;
+        background: #fff;
+        a{
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            color: #FFF;
+            background-color: #FFD15D;
+            line-height: 44px;
+            height: 44px;
+            width: 60px;
+            text-align: center;
+            font-size: 28px;
+        }
+    }
+}
+
+
+.alert_card{
+        position: absolute;
+        top: 180px;
+        left: 10%;
+        width: 80%;
+        height: 140px;
+        padding-top: 30px;
+        background-color: #FFB40B;
+        text-align: center;
+        p, a{
+            color: #fff;
+        }
+        .btns{
+            position: absolute;
+            bottom:0px;
+            left:0px;
+            width: 100%;
+
+
+            text-align: center;
+            a{
+                display: inline-block;
+                width: 49%;
+                padding: 10px;
+                text-align: center;
+                background-color: #FFC107;
+            }
+        }
+    }
+#event_list{
+    padding-top: 44px;
+    padding-bottom: 100px;
+
+
+    p, a{
+        font-size: 12px;
+    }
+    .glyphicon{
+        margin-right: 4px;
+    }
+    .event_item{
+        padding: 8px 0px;
+        background-color: #fff;
+        margin-bottom: 10px;
+        aside{
+            padding:5px  15px;
+        }
+        header{
+            padding: 12px;
+            margin-bottom: 12px;
+            .category{
+                font-size: 18px;
+                font-weight: 500;
+            }
+            img{
+                width: 30px;
+            }
+        }
+        .state{
+           color: #f5a623;
+        }
+        p{
+            margin-bottom: 4px;
+            color: #777;
+        }
+        .progress{
+            height: 24px;
+            background-color: #f5a623;
+            border-radius: 0px;
+            margin-bottom: 5px;
+            .progress-bar{
+
+                background-color: @background-color-enable;
+                box-shadow: none;
+                border-radius: 0px 15px 15px 0px;
+            }
+            .progress_font{
+                position: absolute;
+                width: 100%;
+                font-size: 14px;
+                line-height: 24px;
+                text-align: center;
+                color: #fff;
+            }
+        }
+
+    }
+    .club_tag{
+        color: #777;
+        float: right;
+        img{
+            width: 30px;
+            height: 30px;
+            border-radius: 15px;
+        }
+
+    }
+
+    .ngdialog, .ngdialog-overlay{
+        top: 44px;
+
+    }
+    .ngdialog-content, .ngdialog-overlay{
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0);
+    }
+    .ngdialog-close{
+        display: none;
+    }
+}
+
+
+#location{
+    #l-map{
+        height:240px;
+        width:100%;}
+    #r-result{
+        width:100%;
+        div{
+            border-top: none;
+        }
+    }
+    .result{
+        position: fixed;
+        top: 60px;
+        width: 100%;
+        height: 100%;
+        background-color: #f0f0f0;
+        overflow: scroll;
+        padding-bottom: 60px;
+    }
+    .tip{
+        background-color: antiquewhite;
+        padding: 8px;
+        color: #123;
+    }
+    .pois, .result{
+        .poi_item{
+            padding: 5px;
+            background-color: #fff;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+
+#event{
+    margin-bottom: 100px;
+    background-color: #fff;
+
+    height: 100%;
+    .page_header{
+        padding: 10px;
+        border-bottom: solid 1px #ccc;
+        .title{
+            margin-bottom: 12px;
+            img{
+                width: 30px;
+            }
+        }
+        .name{
+            margin: 10px 0px;
+        }
+        .club{
+            line-height: 24px;
+            .head_img{
+                width: 24px;
+                border-radius: 12px;
+            }
+            .come_in_club{
+                float: right;
+            }
+        }
+    }
+    .member{
+        padding: 8px;
+        .icon{
+            width: 14px;
+        }
+    }
+    .progress{
+            height: 24px;
+            background-color: #f5a623;
+            border-radius: 0px;
+            margin-bottom: 5px;
+            .progress-bar{
+
+                background-color: @background-color-enable;
+                box-shadow: none;
+                border-radius: 0px 15px 15px 0px;
+            }
+            .progress_font{
+                position: absolute;
+                width: 100%;
+                font-size: 14px;
+                line-height: 24px;
+                text-align: center;
+                color: #fff;
+            }
+        }
+
+    .ggg{
+        position: relative;
+        height: 60px;
+
+        .left, .right{
+            width: 50%;
+            text-align: center;
+            padding: 20px;
+            background-color: #F1F1F1;
+            img{
+                width: 30px;
+                margin-bottom: 5px;
+            }
+
+        }
+        .right{
+            background-color: #E6E6E6;
+        }
+    }
+    .m_line{
+        position: relative;
+        top: 20px;
+        padding: 8px;
+        .line_title{
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 14px;
+            margin: 0px 5px;
+            img{
+                width: 14px;
+                margin-right: 5px;
+                margin-bottom: 2.5px;
+            }
+
+        }
+        .value{
+                padding-left: 28px;
+            }
+    }
+
+    .submit_line{
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+        width: 100%;
+        padding: 10px;
+        color: #fff;
+        //background-color: #FFC107;
+        text-align: center;
+        border: none;
+        .next{
+            color: #fff;
+            display: block;
+            margin-top: 10px;
+            background-color: #FFC107;
+            padding: 10px;
+        }
+    }
+
+}
+
+#city_picker{
+    position: absolute;
+    top: 0x;
+    left: 0px;
+    width: 70%;
+    height: 100%;
+    background-color: #fff;
+    .m_form{
+        padding: 0px;
+        input{
+            background-color: #f0f0f0;
+        }
+    }
+    .cur_city{
+        color: #333;
+        background-color: #fff;
+        padding: 10px;
+    }
+    .city{
+        color: #333;
+        background-color: #fff;
+        width: 100%;
+        a{
+            padding: 10px;
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            color: #333;
+        }
+        a:hover{
+            background-color: #FFD15D;
+        }
+    }
+    .cur_city{
+        margin-bottom: 10px;
+    }
+     .city_label{
+            padding: 10px;
+            margin-bottom: 0px;
+            width: 100%;
+            background-color: #F0F0F0;
+            font-size: 12px;
+        }
+}
+
+#filter_picker{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 70%;
+    min-height: 600px;
+    background-color: #fff;
+    .item{
+        padding: 50px 20px 50px 30px;
+        .m_label{
+            font-size: 20px;
+        }
+        .value{
+            float: right;
+        }
+    }
+    .item:nth-child(even){
+        background-color: #fff;
+    }
+    .item:nth-child(odd){
+        background-color: #f6f6f6;
+    }
+    .next{
+        position: fixed;
+        right: 0px;
+        bottom: 0px;
+        width: 70%;
+        padding: 10px;
+        color: #fff;
+        background-color: #FFC107;
+        text-align: center;
+        border: none;
+    }
+}
+
+.filter_list{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 70%;
+    min-height: 600px;
+    background-color: #fff;
+    .m_label{
+        background-color: #f6f6f6;
+        padding: 12px;
+    }
+    .item a{
+        display: inline-block;
+        padding: 12px;
+        width: 100%;
+    }
+    .item a:hover, .item a:active, item a:focus{
+        background-color: #FFC107;
+        color: #fff;
+
+    }
+    p, a{
+        color: #111;
+    }
+}
+
+#navigate{
+    #map{
+        position: fixed !important;
+        left: 0px;
+        top:0px;
+        width: 100%;
+        height: 100%;
+    }
+    footer{
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        background-color: #fff;
+        padding: 15px 10px 10px 30px;
+        z-index: 1000;
+    }
+}

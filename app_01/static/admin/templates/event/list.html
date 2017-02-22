@@ -1,0 +1,38 @@
+<div class="container-fluid">
+    <div class="row">
+        <div ng-include="'/static/admin/templates/event/sidebar.html'"></div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <div class="container-fluid">
+
+                <h2 class="sub-header">活动列表</h2>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <td>#</td>
+                            <td>活动名称</td>
+                            <td>活动类型</td>
+                            <td>删除</td>
+                            <td>修改</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="event in events">
+                            <td><a ng-click="event_detail(event.id)">{{ event.id }}</a></td>
+                            <td><a ng-click="event_detail(event.id)">{{ event.name }}</a></td>
+                            <td ng-show="event.type == 'event'"><a ng-click="event_search({'type':event.type})">单次活动</a>
+                            </td>
+                            <td ng-show="event.type == 'template'"><a
+                                    ng-click="event_search({'type':event.type})">周期活动</a></td>
+                            <td><a ng-click="event_delete(event.id)">删除</a></td>
+                            <td><a ng-click="event_modify(event.id)">修改</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+

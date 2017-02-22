@@ -1,0 +1,19 @@
+<div class="container-fluid filter_list" id="filter_category">
+    <ul>
+        <li class="item">
+            <a href ng-click="closeThisDialog('全部')">全部</a>
+        </li>
+    </ul>
+    <p class="m_label">球类</p>
+    <ul>
+        <li class="item" ng-repeat="item in bool_categories">
+            <a href ng-click="closeThisDialog(item)">{{item}}</a>
+        </li>
+    </ul>
+    <p class="m_label">户外</p>
+    <ul>
+        <li class="item" ng-repeat="item in out_categories">
+            <a href ng-click="closeThisDialog(item)">{{item}}</a>
+        </li>
+    </ul>
+</div>

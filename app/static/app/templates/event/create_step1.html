@@ -1,0 +1,117 @@
+<div class="container-fluid" id="event_create">
+    <div ng-include="alert_url"></div>
+    <header>
+        <div class="club_info" ng-show="club">
+            <h4 class="name">{{ club.name }}</h4>
+            <a class="logo">
+                <img src="{{ club.logo_url }}">
+            </a>
+            <p class="tags">
+                <!--<span ng-repeat="tag in event.club.tags">{{tag}}</span>-->
+                {{club.tags}}
+            </p><!--ng-show="wx_client"-->
+
+        </div>
+        <div class="add_club" ng-hide="club" ng-click="to_add_club()">
+            <p class="plus">+</p>
+            <a>您还没有俱乐部，请创建俱乐部后再发布活动 </a>
+        </div>
+    </header>
+    <form name="new_event" method="post" class="m_form" ng-submit="submit()">
+        <fieldset>
+            <input name="id" id="event_id" class="id" type="hidden" value="{{ event.id }}">
+
+            <label class="m_label">活动项目</label>
+            <input name="category" class="m_input" type="text" placeholder="请选择运动项目" ng-click="category_pick()"
+                   ng-model="event.category" ng-change="checkNextEnable()" ng-trim="true" ng-required="true" ngMinlength="1">
+
+            <label class="m_label">活动名称</label>
+            <input name="name" class="m_input" type="text" placeholder="活动名称(必填)"
+                   ng-model="event.name" ng-change="checkNextEnable()" ng-trim="true" ng-required="true" ngMinlength="1">
+
+            <label class="m_label">活动时间</label>
+            <p class="time_type line">
+                <a class="half_btn left " ng-class="{false: 'btn_enable'}[event.is_cycle]" ng-click="time_type_set(1)">单次活动</a>
+                <a class="half_btn right" ng-class="{true: 'btn_enable'}[event.is_cycle]" ng-click="time_type_set(2)">
+                    周期活动</a>
+                <p ng-show="event.days" class="days">活动周期：[{{event.day_show}}]</p>
+            <div class="form_control_line time">
+                <span>开始时间</span>
+                <a href class="value_selected" ng-click="set_start_time()">
+                    {{ event.start_time | date: 'yyyy-MM-dd HH:mm' }}
+                </a>
+                <input name="start_time" id="start_time_in" class="start_time_input" type="datetime-local"
+                       value="{{ event.start_time | date: 'yyyy-MM-dd HH:mm' }}" min="{{time_min}}" max="{{time_max}}"
+                       ng-model="event.start_time">
+            </div>
+
+            <div class="form_control_line time">
+                <span>结束时间</span>
+                <a href class="value_selected" ng-click="set_end_time()">
+                    {{ event.end_time | date: 'yyyy-MM-dd HH:mm' }}
+                </a>
+                <input name="end_time" id="end_time_in" class="end_time_input" type="datetime-local"
+                       value="{{ event.end_time | date: 'yyyy-MM-dd HH:mm' }}" min="{{time_min}}" max="{{time_max}}"
+                       ng-model="event.end_time">
+            </div>
+
+            <label class="m_label">集合地点</label>
+            <div class="location_line" ng-click="location_set()">
+                <a class="location_icon"><span class="glyphicon glyphicon-map-marker"></span> </a>
+                <input name="location" class="m_input" placeholder="点击编辑活动地点" ng-model="event.location.title">
+            </div>
+
+            <label class="m_label">活动费用</label>
+            <div class="line">
+                <input name="fee" id="fee" class="fee_input" placeholder="输入场地费用"
+                       ng-model="event.fee" ng-click="toggle_aa_set(1)" ng-disable="event.is_aa">
+                <a class="aa right" ng-class="{true: 'btn_enable'}[event.is_aa]" ng-click="toggle_aa_set(2)">AA制</a>
+            </div>
+
+            <div class="goushi_line row">
+                <div class="left_part">
+                    <label class="m_label">活动人数</label><br>
+                    <input name="member_count_limit" placeholder="输入活动人数" ng-model="event.members_count_limit">
+                </div>
+                <div class="right_part">
+                    <label class="m_label">场地号</label><br>
+                    <input name="place_num" placeholder="输入场地号" ng-model="event.place_num">
+                </div>
+            </div>
+
+            <label class="m_label"> 联系方式</label>
+            <input name="phone" id="phone" class="m_input" placeholder="输入手机号" ng-model="event.mobile">
+
+            <label class="m_label">发布到QQ群</label>
+
+            <div class="publish">
+                <p class="bind_qq" ng-click="bind_show()">
+                    <a class="publish_btn">+</a>
+                    <span class="place_holder">点击添加QQ群</span>
+                </p>
+                <ul class="qq_list">
+                    <li class="" ng-repeat="cluster in clusters" ng-click="qq_select(cluster.external_id)">{{cluster.name}}:{{cluster.external_id}}
+                        <a class="selected" ng-show="qq_selected(cluster.external_id)"><span class="glyphicon glyphicon-ok"></span></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="submit_line">
+                <input class="next btn_enable" type="submit" value="确定">
+            </div>
+
+        </fieldset>
+
+    </form>
+
+</div>
+<script type="text/ng-template" id="band_qq">
+    <div class="alert_card">
+        <p>绑定QQ请选绑定按钮</p>
+        <p class="btns">
+            <a class="cancel" ng-click="closeThisDialog()">取消</a>
+            <a class="finish" ng-click="closeThisDialog(1)">绑定</a>
+        </p>
+    </div>
+</script>
+

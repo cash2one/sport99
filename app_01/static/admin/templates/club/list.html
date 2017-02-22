@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <div class="row">
+        <div ng-include="'/static/admin/templates/club/sidebar.html'"></div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <div class="container-fluid">
+
+                <h2 class="sub-header">俱乐部列表</h2>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <td>#</td>
+                            <td>俱乐部名称</td>
+                            <!--<td><a class="jian" ng-click="club_delete(club.id)">delete</a></td>-->
+                            <td>修改</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="club in clubs">
+                            <td><a ng-click="club_detail(club.id)">{{ club.id }}</a></td>
+                            <td><a ng-click="club_detail(club.id)">{{ club.name }}</a></td>
+                            <!--<td><a class="jian" ng-click="club_delete(club.id)">delete</a></td>-->
+                            <td><a class="jian" ng-click="club_modify(club.id)">修改</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>

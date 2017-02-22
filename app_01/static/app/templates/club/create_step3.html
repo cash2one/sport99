@@ -1,0 +1,18 @@
+<div class="container-fluid club_create qq" id="club_create" style="padding-top: 100px;">
+    <div ng-include="alert_url"></div>
+    <form name="new_club" method="post" class="m_form" ng-submit="submit()">
+        <fieldset>
+            <label class="m_label" style="font-size: 18px;">给QQ机器人“小九”发送验证码“99”，完成验证，小九QQ号如下</label>
+            <p name="qq" class="m_input qq">{{qq}}</p>
+            <!--<p class="m_line" ng-click="copy()">-->
+                <!--复制并跳转到QQ-->
+            <!--</p>-->
+            <input class="next" type="submit" value="完成">
+        </fieldset>
+    </form>
+    <p class="page_num">
+        <span class="selected">1</span>
+        <span class="selected">2</span>
+        <span>3</span>
+    </p>
+</div>

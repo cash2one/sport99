@@ -1,0 +1,672 @@
+
+
+
+#event_create{
+    .half_btn{
+        display: inline-block;
+        left: 0px;
+        height: 44px;
+        width: 49%;
+        text-align: center;
+        background-color: #fafafa;
+    }
+    .cover{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 110px;
+        background: rgba(222,222,222,.8);
+        z-index: 100;
+    }
+    header{
+        position: relative;
+        min-height: 111px;
+        border-bottom: solid 1px rgb(251, 251, 251);
+        background-color: #fff;
+        .add_club{
+            position: relative;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+
+            p{
+                padding: 10px;
+            }
+            .plus{
+                font-size: 30px;
+            }
+        }
+
+        .club_info{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            padding: 20px 15px;
+            color: #fff;
+            z-index: 10;
+            background-color: #ffd15d;
+            .name{
+                position: absolute;
+                top: 30px;
+                left: 96px;
+            }
+            img{
+                position: relative;
+                width: 71px;
+                //height: 75px;
+                border-radius: 40px;
+            }
+            .tags{
+                position: absolute;
+                left: 96px;
+                top: 65px;
+                font-size: 14px;
+                color: #fff;
+                span{
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+    .time_type{
+        //background-color: @background-color;
+
+        .btn_selected{
+            background: #fff;
+            color: #4c4c4c;
+        }
+    }
+    .days{
+        padding: 10px;
+        background: #fff;
+        margin-top: 10px;
+    }
+    .location_line{
+        position: relative;
+        input{
+            padding-left: 65px;
+        }
+    }
+    .location_icon{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 60px;
+        color: #fff;
+        background-color: #FFD15D;
+        font-size: 24px;
+        text-align: center;
+        line-height: 44px;
+        height: 44px;
+        margin-top: 5px;
+        span{
+            line-height: 44px;
+        }
+    }
+    .fee_input{
+        width: 67%;
+        padding: 12px 10px;
+        border: none;
+        border-radius: 1px;
+        margin: 5px 0px;
+        background-color: #fafafa;
+
+    }
+    .beizhu{
+        display: block;
+        width: 100%;
+        border: solid 1px #ddd;
+        margin-top: 5px;
+    }
+    .btn_selected{
+        background-color: #fff !important;
+        color: #4c4c4c !important;
+    }
+    .aa{
+        position: relative;
+        top: 0px;
+        display: inline-block;
+        width: 31%;
+        padding: 12px;
+        text-align: center;
+        background-color: #fafafa;
+        margin: 5px 0px;
+    }
+    .goushi_line{
+        position: relative;
+        top: 10px;
+        height: 80px;
+        margin: 5px 0px;
+        .left_part{
+            position: absolute;
+            top: 0px;
+            padding: 0px;
+            left: 0px;
+            width: 48%;
+            input{
+                padding: 12px 10px;
+                border: none;
+                width: 100%;
+                border-radius: 0px;
+            }
+        }
+        .right_part{
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 50%;
+            padding: 0px;
+            input{
+                padding: 12px 10px;
+                border: none;
+                width: 100%;
+                border-radius: 0px;
+            }
+        }
+    }
+    .qq_list{
+        li{
+            padding: 12px;
+            margin-bottom: 5px;
+            background-color: #fff;
+            a{
+                float: right;
+            }
+        }
+    }
+    .bind_qq{
+        position: relative;
+        padding: 12px;
+        padding-left: 65px;
+        margin-bottom: 10px;
+        background: #fff;
+        color: #B3AFAF;
+        a{
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            color: #FFF;
+            background-color: #FFD15D;
+            line-height: 44px;
+            height: 44px;
+            width: 60px;
+            text-align: center;
+            font-size: 38px;
+        }
+    }
+}
+
+.alert_card01{
+    position: fixed;
+    background: #eee;
+    bottom: 0px;
+    width: 100%;
+    .title{
+        padding: 10px 10px;
+    }
+    form{
+        padding: 0px 10px;
+        .num{
+            display: block;
+            padding: 10px 0px;
+            background: #fff;
+            border: none;
+            width: 100%;
+            text-align: center;
+        }
+    }
+    .join_ok{
+        color: #fff;
+        display: block;
+
+        background-color: #FFD15D;
+        padding: 12px;
+        font-size: 18px;
+        width: 100%;
+        border: none;
+        text-align: center;
+    }
+
+}
+
+
+.alert_card{
+    position: absolute;
+    top: 180px;
+    left: 10%;
+    width: 80%;
+    height: 140px;
+    padding-top: 30px;
+    background-color: #f7bf4b;
+    text-align: center;
+    p, a{
+        color: #fff;
+    }
+    .btns{
+        position: absolute;
+        bottom:0px;
+        left:0px;
+        width: 100%;
+        text-align: center;
+        a{
+            display: inline-block;
+            width: 48%;
+            padding: 10px;
+            text-align: center;
+            background-color: #ffd15d;
+        }
+    }
+}
+
+
+.event_item{
+        padding-bottom: 15px;
+        background-color: #fff;
+        margin-bottom: 10px;
+        aside{
+            padding:5px  15px;
+        }
+        header{
+            padding: 15px;
+            padding-bottom: 0px;
+            .category{
+                font-size: 18px;
+                font-weight: 500;
+                color: #4c4c4c;
+            }
+            img{
+                width: 30px;
+            }
+        }
+        .state{
+           color: #f5a623;
+        }
+        .mm{
+            margin-bottom: 4px;
+            color: #777;
+            img{
+                width: 18px;
+                margin-right: 5px;
+                margin-top: -3px;
+            }
+        }
+        .progress{
+            height: 30px;
+            background-color: #f7bf4b;
+            border-radius: 0px;
+            margin-bottom: 0px;
+            .progress-bar{
+
+                background-color: @background-color-enable;
+                box-shadow: none;
+                border-radius: 0px 15px 15px 0px;
+            }
+            .progress_font{
+                position: absolute;
+                width: 100%;
+                font-size: 14px;
+                line-height: 30px;
+                text-align: center;
+                color: #fff;
+            }
+        }
+
+    }
+
+
+#event_list{
+    padding-top: 44px;
+    padding-bottom: 0px;
+
+    .glyphicon{
+        margin-right: 4px;
+    }
+    .half_btn{
+        display: inline-block;
+        left: 0px;
+        height: 44px;
+        width: 49%;
+        text-align: center;
+
+        color: #fff;
+    }
+    .half_btn_selected{
+        background-color: #f7bf4b;
+        color: #fff;
+    }
+
+
+    .club_tag{
+        color: #777;
+        float: right;
+        img{
+            width: 30px;
+            height: 30px;
+            border-radius: 15px;
+        }
+
+    }
+
+    .ngdialog, .ngdialog-overlay{
+        top: 44px;
+
+    }
+    .ngdialog-content, .ngdialog-overlay{
+        height: 100%;
+        background-color: rgba(33, 33, 33, 0.5);
+    }
+    .ngdialog-close{
+        display: none;
+    }
+}
+
+
+#location{
+    #l-map{
+        height:240px;
+        width:100%;}
+    #r-result{
+        width:100%;
+        div{
+            border-top: none;
+        }
+    }
+    .result{
+        position: fixed;
+        top: 60px;
+        width: 100%;
+        height: 100%;
+        background-color: #f0f0f0;
+        overflow: scroll;
+        padding-bottom: 60px;
+    }
+    .tip{
+        background-color: antiquewhite;
+        padding: 8px;
+        color: #123;
+    }
+    .pois, .result{
+        .poi_item{
+            padding: 5px;
+            background-color: #fff;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+
+#event{
+    background-color: #fff;
+    height: 100%;
+     .event_footer{
+        height: 150px;
+        background: #fff;
+    }
+    .page_header{
+        padding: 10px;
+        padding-top: 10px;
+        //border-bottom: solid 1px #ccc;
+        .title{
+            margin-bottom: 20px;
+            .c{
+                font-size: 20px;
+                color: #4c4c4c;
+            }
+            img{
+                width: 30px;
+                margin-right: 5px;
+                margin-bottom: 5px;
+            }
+        }
+        .name{
+            margin: 10px 0px;
+        }
+        .club{
+            line-height: 24px;
+            .head_img{
+                width: 30px;
+                border-radius: 100%;
+                margin-right: 5px;
+            }
+            .come_in_club{
+                float: right;
+            }
+        }
+    }
+    .member{
+        a{
+            color: #4c4c4c;
+        }
+        padding: 13px 10px;
+        .icon{
+            width: 18px;
+            margin-right: 3px;
+        }
+    }
+    .progress{
+            height: 30px;
+            background-color: #f7bf4b;
+            border-radius: 0px;
+            margin-bottom: 15px;
+            .progress-bar{
+
+                background-color: @background-color-enable;
+                box-shadow: none;
+                border-radius: 0px 15px 15px 0px;
+            }
+            .progress_font{
+                position: absolute;
+                width: 100%;
+                font-size: 14px;
+                line-height: 30px;
+                text-align: center;
+                color: #fff;
+            }
+        }
+
+    .ggg{
+        position: relative;
+        height: 130px;
+
+        .left, .right{
+            width: 50%;
+            text-align: center;
+            padding: 25px;
+            background-color: #fafafa;
+            img{
+                width: 41.5px;
+                margin-bottom: 5px;
+            }
+
+        }
+        .right{
+            background-color: #f0f0f0;
+        }
+    }
+    .m_line{
+        position: relative;
+        padding: 15px 10px;
+        background: #fff;
+        .line_title{
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 14px;
+            margin: 0px 5px;
+            img{
+                width: 18px;
+                margin-right: 5px;
+                margin-bottom: 2.5px;
+            }
+
+        }
+        .value{
+                padding-left: 30px;
+            }
+    }
+    .m_e{
+        p{
+            padding: 15px;
+            background: #fff;
+        }
+    }
+
+    .cancel{
+        padding: 12px;
+    }
+    .submit_line{
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+        width: 100%;
+        color: #fff;
+        //background-color: #FFC107;
+        text-align: center;
+        border: none;
+        .next{
+            color: #fff;
+            display: block;
+            margin-top: 10px;
+            background-color: #FFD15D;
+            padding: 12px;
+            font-size: 18px;
+        }
+        .cancel{
+            display: inline-block;
+            padding: 12px;
+            background: #fafafa;
+            width: 48%;
+        }
+    }
+
+}
+
+
+#city_picker{
+    position: absolute;
+    top: 0x;
+    left: 0px;
+    width: 70%;
+    height: 100%;
+    background-color: #fff;
+    .m_form{
+        padding: 0px;
+        input{
+            background-color: #f0f0f0;
+        }
+    }
+    .cur_city{
+        color: #333;
+        background-color: #fff;
+        padding: 10px;
+    }
+    .city{
+        color: #333;
+        background-color: #fff;
+        width: 100%;
+        a{
+            padding: 10px;
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            color: #333;
+        }
+        a:hover{
+            background-color: #FFD15D;
+        }
+    }
+    .cur_city{
+        margin-bottom: 10px;
+    }
+     .city_label{
+            padding: 10px;
+            margin-bottom: 0px;
+            width: 100%;
+            background-color: #F0F0F0;
+            font-size: 12px;
+        }
+}
+
+
+#filter_picker{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 70%;
+    min-height: 600px;
+    background-color: #fff;
+    .item{
+        padding: 50px 20px 50px 30px;
+        .m_label{
+            font-size: 20px;
+        }
+        .value{
+            float: right;
+        }
+    }
+    .item:nth-child(even){
+        background-color: #fff;
+    }
+    .item:nth-child(odd){
+        background-color: #f6f6f6;
+    }
+    .next{
+        position: fixed;
+        right: 0px;
+        bottom: 0px;
+        width: 70%;
+        padding: 10px;
+        color: #fff;
+        background-color: #FFC107;
+        text-align: center;
+        border: none;
+    }
+}
+
+
+.filter_list{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 70%;
+    min-height: 600px;
+    background-color: #fff;
+    .m_label{
+        background-color: #f6f6f6;
+        padding: 12px;
+    }
+    .item a{
+        display: inline-block;
+        padding: 12px;
+        width: 100%;
+    }
+    .item a:hover{
+        background-color: #FFC107;
+        color: #fff;
+
+    }
+    p, a{
+        color: #111;
+    }
+}
+
+
+#navigate{
+    #map{
+        position: fixed !important;
+        left: 0px;
+        top:0px;
+        width: 100%;
+        height: 100%;
+    }
+    footer{
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        background-color: #fff;
+        padding: 15px 10px 10px 30px;
+        z-index: 1000;
+    }
+}

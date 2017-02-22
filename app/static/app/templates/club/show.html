@@ -1,0 +1,50 @@
+<div class="container-fluid" id="club_show">
+    <header class="" style="background-image:url({{club.bg_img_url}});">
+        <img src="{{club.logo_url}}">
+        <p class="name">{{club.name}}</p>
+        <p>{{club.tags}}</p>
+    </header>
+
+    <section class="members m_line">
+        <a class="m_label" href="#/clubs/members/{{club.id}}"><img src="/static/app/img/icons/已报名队员.png">俱乐部成员</a>
+        <a class="right" href="#/clubs/members/{{club.id}}">共{{club.member_count}}人<span class="glyphicon glyphicon-menu-right"></span></a>
+    </section>
+    <section class="members m_line">
+        <a class="m_label" href=""><img src="/static/app/img/icons/已报名队员.png">QQ群</a>
+        <a class="right" href="#/clubs/members/{{club.id}}">{{club.members_countaa}}个
+            <span class="glyphicon glyphicon-menu-right"></span></a>
+    </section>
+    <section class="events m_line">
+        <header class="">
+            <a class="m_label"><img src="/static/app/img/icons/俱乐部活动.png">俱乐部活动</a>
+            <a class="right">共<span style="color: F5A623;">{{club.events_count}}</span>项</a>
+        </header>
+        <article>
+            <ul>
+                <li class="event_item" ng-repeat="event in events">
+                    <header class="">
+                        <a class="category">
+                            <img src="/static/app/img/icons/{{event.category}}.png">
+                            {{event.category}}
+                        </a>
+                    </header>
+                    <aside>
+                        <p class="state">{{event.status}}</p>
+                        <p><span class="glyphicon glyphicon-time"></span>{{event.start_time}} </p>
+                        <p><span class="glyphicon glyphicon-map-marker"></span>{{event.venue.name}} </p>
+                    </aside>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="{{event.member_count}}"
+                             aria-valuemin="0" aria-valuemax="{{event.member_count_limit}}"
+                             style="width: {{event.percent}}">
+                        </div>
+                        <p class="progress_font">{{event.member_count}}/{{event.member_count_limit}}人</p>
+                    </div>
+                </li>
+            </ul>
+        </article>
+    </section>
+
+    <a class="next" ng-show="is_follow_enable" ng-click="follow()">关注俱乐部</a>
+
+</div>

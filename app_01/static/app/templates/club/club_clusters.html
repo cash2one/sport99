@@ -1,0 +1,12 @@
+<div class="container-fluid club_create" id="qq_clusters">
+    <label>已添加的QQ群</label>
+    <ul>
+        <li class="cluster" ng-repeat="cluster in clusters">
+            <span class="name">{{cluster.name}}</span>:
+            <span class="num">{{cluster.external_id}}</span>
+        </li>
+
+    </ul>
+    <p class="tip">邀请“小九”机器人到您的QQ群即可绑定QQ群</p>
+
+</div>

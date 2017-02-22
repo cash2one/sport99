@@ -1,0 +1,99 @@
+.ngdialog_page, .page_city_picker, .page_category_picker{
+    height: 100%;
+    .ngdialog-close{
+        display: none;
+    }
+    .ngdialog-content{
+        height: 100%;
+    }
+    .ngdialog-overlay{
+        display: none;
+    }
+}
+/****************** 类别选择 *******************/
+.category_picker{
+    position: relative;
+    height: 100%;
+    padding-top: 40px;
+    background-color: @background-color;
+    .next{
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+        width: 100%;
+        padding: 10px;
+        color: #fff;
+        background-color: #FFC107;
+        text-align: center;
+        border: none;
+
+    }
+    .category_list{
+        position: relative;
+        padding: 8px;
+        .m_label{
+            font-size: 14px;
+            padding: 8px;
+            color: #888;
+        }
+        li{
+            padding: 8px;
+            display: inline-block;
+            width: 33%;
+            text-align: center;
+            a{
+                display: inline-block;
+                width: 100%;
+                padding: 12px 0px;
+                background-color: #fff;
+                font-size: 14px;
+            }
+
+            .selected{
+                background-color: #FFD15D;
+                color: #fff;
+            }
+        }
+
+    }
+}
+
+/****************** 普通标题栏 *******************/
+.bar{
+    position: fixed;
+    height: 44px;
+    width: 100%;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+    z-index: 100;
+}
+.title_bar{
+    position: fixed;
+    height: 44px;
+    width: 100%;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+    z-index: 100;
+    top: 0px;
+    text-align: center;
+
+    background-color: #333;
+    a, p, span{
+        line-height: 44px;
+        font-size: 14px;
+        color: #fff;
+    }
+
+    .back{
+        position: relative;
+        float: left;
+        left: 10px;
+    }
+    .option{
+        position: relative;
+        float: right;
+        right: 10px;
+    }
+}

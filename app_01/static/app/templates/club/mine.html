@@ -1,0 +1,41 @@
+<div class="container-fluid has_club_add" id="mine_clubs">
+    <div ng-include="alert_url"></div>
+    <header>
+        <div class="club_info" ng-show="club" ng-click="to_club_show(club.id)">
+            <h4 class="name">{{ club.name }}</h4>
+            <a class="logo">
+                <img src="{{ club.logo_url }}">
+            </a>
+            <p class="tags">
+                <!--<span ng-repeat="tag in event.club.tags">{{tag}}</span>-->
+                {{club.tags}}
+            </p><!--ng-show="wx_client"-->
+
+        </div>
+        <div class="add_club" ng-hide="club" ng-click="to_add_club()">
+            <p class="plus">+</p>
+            <a>您还没有俱乐部，请创建俱乐部后再发布活动 </a>
+        </div>
+    </header>
+    <!-- 关注俱乐部列表 -->
+
+    <ul>
+        <li class="follow_club" ng-repeat="club in follow_clubs">
+            <div class="club_info" ng-show="club" ng-click="to_club_show(club.id)">
+                <h4 class="name">{{ club.name }}</h4>
+                <a class="logo">
+                    <img ng-src="{{ club.logo_url }}">
+                </a>
+                <p class="tags">
+                    <!--<span ng-repeat="tag in event.club.tags">{{tag}}</span>-->
+                    {{club.tags}}
+                </p><!--ng-show="wx_client"-->
+            </div>
+            <div class="cancel" ng-click="cancel(club.id)">
+                <p class=""><span class="glyphicon glyphicon-remove"></span> </p>
+                <a>取消关注</a>
+            </div>
+        </li>
+
+    </ul>
+</div>

@@ -1,0 +1,27 @@
+<div class="container-fluid" id="location">
+    <form name="new_event" method="post" class="m_form">
+        <input name="category" class="m_input" type="text" placeholder="输入场馆名称"
+               ng-model="search_value" ng-change="search()" ng-trim="true" ng-required="true" ngMinlength="1">
+    </form>
+    <div id="l-map"></div>
+    <div class="pois">
+        <p class="tip">可拖动地图后选择位置</p>
+        <ul ng-show="pois_show">
+            <li class="poi_item" ng-repeat="poi in near_pois" ng-click="finish(poi)">
+                <h5>{{poi.title}}</h5>
+                <p>{{poi.address}}</p>
+            </li>
+        </ul>
+    </div>
+    <div class="result" ng-show="result_returned">
+        <div id="r-result" ng-show="result_returned">
+            <ul>
+                <li class="poi_item" ng-repeat="poi in search_pois" ng-click="finish(poi)">
+                    <h5>{{poi.title}}</h5>
+                    <p>{{poi.address}}</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>

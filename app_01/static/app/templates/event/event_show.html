@@ -1,0 +1,109 @@
+<div class="container-fluid" id="event">
+    <div ng-include="alert_url"></div>
+    <header class="page_header">
+        <h5 class="title"><img src="/static/app/img/icons/{{event.category_img}}.png">
+            <a class="c">{{event.category}}</a>
+        </h5>
+        <!--<p class="name">{{event.name}}</p>-->
+        <p class="club">
+            <img class="head_img" src="{{event.club.logo_url}}">
+            <!--<img class="head_img" src="http://7s1srd.com1.z0.glb.clouddn.com/%40%2Fclub_logo_url%2F50">-->
+            {{event.club.name}}
+            <a class="come_in_club" ng-click="to_club(event.club.id)">进入俱乐部<span class="glyphicon glyphicon-menu-right"></span> </a>
+        </p>
+    </header>
+    <section class="event">
+        <p class="member" ng-click="to_members()">
+            <img class="icon" src="/static/app/img/icons/已报名队员.png">
+            <a>已报名队员</a>
+            <!--<ul>-->
+                <!--<li>-->
+                    <!--<img ng-repeat="member in members">-->
+                <!--</li>-->
+            <!--</ul>-->
+            <span class="right glyphicon glyphicon-menu-right"></span>
+        </p>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="{{event.members_count}}"
+                 aria-valuemin="0" aria-valuemax="{{event.members_count_limit}}" id="percent"
+                 style="width: {{event.percent}}%;">
+            </div>
+            <p class="progress_font">{{event.members_count}}/{{event.members_count_limit}}人</p>
+        </div>
+        <div class="ggg">
+            <div class="left contact">
+                <a href="tel:{{event.mobile}}">
+                    <img src="/static/app/img/icons/电话信息.png"><br>
+                    联系组织者
+                </a>
+            </div>
+            <div class="right location_nav">
+                <a href="#/navigate/{{event.id}}">
+                    <img src="/static/app/img/icons/位置信息.png"><br>
+                    场地浏览
+                </a>
+            </div>
+        </div>
+        <div class="m_line">
+            <h5 class="line_title"><img src="/static/app/img/icons/活动时间.png">
+                <span>活动时间</span>
+            </h5>
+            <p class="value">{{event.time_str}}</p>
+        </div>
+        <div class="m_line">
+            <h5 class="line_title"><img src="/static/app/img/icons/活动地点.png">
+                <span>集合地点</span>
+            </h5>
+            <p class="value">{{event.venue.title}}</p>
+        </div>
+        <div class="m_line">
+            <h5 class="line_title"><img src="/static/app/img/icons/活动费用.png">
+                <span>活动费用</span>
+            </h5>
+            <p class="value">{{event.fee}}</p>
+        </div>
+        <div class="m_line">
+            <h5 class="line_title"><img src="/static/app/img/icons/活动场地.png">
+                <span>场地号</span>
+            </h5>
+            <p class="value">{{event.place_num}}</p>
+        </div>
+        <div class="m_e">
+            <p>{{event.introduce}}</p>
+        </div>
+
+        <div class="submit_line">
+            <p >
+                <a class="cancel" ng-show="cancel_enable" ng-click="cancel()">取消活动</a>
+                <a class="cancel" ng-show="cancel_enable" ng-click="update()">修改活动</a>
+            </p>
+            <a class="next" ng-show="join_enable" ng-click="join()">立即报名</a>
+            <a class="next" ng-show="exit_enable" ng-click="exit()">取消报名</a>
+        </div>
+        <div class="event_footer"></div>
+    </section>
+    <!--<section class="contact_manager">-->
+        <!--<p class="tip">请长按以下号码拨打电话</p>-->
+        <!--<p class="phone">{{event.phone}}</p>-->
+    <!--</section>-->
+</div>
+<script type="text/ng-template" id="cancel">
+    <div class="alert_card">
+        <p>确定取消吗,取消后不可恢复</p>
+        <p class="btns">
+            <a class="c" ng-click="closeThisDialog()">取消</a>
+            <a class="finish" ng-click="closeThisDialog(1)">确定</a>
+        </p>
+    </div>
+</script>
+<script type="text/ng-template" id="join">
+<div class="alert_card01">
+    <p class="title">选择报名人数</p>
+    <form class="">
+        <input class="num" type="number" min="0" placeholder="0"
+                ng-model="join_count" value="{{join_count}}"><br>
+    </form>
+    <a class="join_ok" ng-click="closeThisDialog(join_count)">确定</a>
+    <p></p>
+</div>
+</script>

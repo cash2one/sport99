@@ -1,0 +1,19 @@
+<div class="container-fluid" id="filter_picker">
+
+    <div class="filter">
+        <p class="item" ng-click="closeThisDialog(1)">
+            <span class="m_label">运动项目</span>
+            <a class="value">{{filter_category}}<span class="glyphicon glyphicon-menu-right"></span></a>
+        </p>
+        <p class="item" ng-click="closeThisDialog(2)">
+            <span class="m_label">活动时间</span>
+            <a class="value">{{filter_weekday}}<span class="glyphicon glyphicon-menu-right"></span></a>
+        </p>
+        <p class="item" ng-click="closeThisDialog(3)">
+            <span class="m_label">排序规则</span>
+            <a class="value">{{filter_order}}<span class="glyphicon glyphicon-menu-right"></span></a>
+        </p>
+
+    </div>
+    <a class="next" ng-click="closeThisDialog(4)">完成</a>
+</div>

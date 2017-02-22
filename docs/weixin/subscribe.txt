@@ -1,0 +1,21 @@
+# coding=utf-8
+
+1、
+<xml>
+<URL><![CDATA[http://101.201.28.157/weixin/index]]></URL>
+<ToUserName><![CDATA[oAdput_4NEjIFI2TW6LXo4nA99bw]]></ToUserName>
+<FromUserName><![CDATA[oAdput_4NEjIFI2TW6LXo4nA99bw]]></FromUserName>
+<CreateTime>1231231231231</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<Latitude></Latitude><Longitude></Longitude>
+<Precision></Precision>
+<MsgId>12345678123456781234567812345678123456781234567812345678</MsgId>
+</xml>
+
+
+2、
+<xml>
+    <ToUserName><![CDATA[oAdput_4NEjIFI2TW6LXo4nA99bw]]></ToUserName>
+    <Encrypt><![CDATA[tCAO3yQb0HG7KMv+Dyo+ewK/dmNWuHesTrwMXvle7TSQ1Nxiz8PGyuNna3pJawGNbQK1VQWKb6+0590gVfmB7NZdoR2nHpATzYJCNkK92TkSd8LagpCExy24AR+uKtotXpa65nHinm1YGl5p0QI0p/35FpaFJblCxzsvxA4AiN2yAyRJAf90WHAIX4yyAS11jApMk189rVC8VkVsyLc3jHIlO3MpbDEncr8DNtKeoKmzYt9RKpcaofXCEaakf0Osv2T2RYHQgJsM4SewgN7iTDHTiF5kMxT8HBxgfMhmgm8x9FO5FWIb/YiOMNWqT54E5AX3P8ggP7gKINx9hMQ6zzcqlGJgYqS6/P7kI2yNnus+9eTeZrqkZScOV4GrTASaIJNVxS9sukJ+1JU583H+vuDDQMOvEyymW14EkXWQuSiAWIrhO0RyRYJ94xP/q1e1ocEqu+vS0Fl8SskxfNr/epQd+f6JgGN4FDw+j+zm2UQOrdYtp6Dldj7pFWWJZb73MCf4ZfrBqZrME4A0toa5IekUfipxBJPf3ozCNImA3rsI/fLqf0RulUwsTYrC797v0RGq5ACjGlSqmlkYNSag0PGt0FmBmc3iTs//xc82EJiWDvOlS/QLiQeOl2Bphvv535LCssz+0JD0EoK5VMW/6wZbQo5cUlUI/UQ+zRidaIk=]]></Encrypt>
+</xml>

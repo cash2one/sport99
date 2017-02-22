@@ -1,0 +1,25 @@
+<div class="container" ng-controller="LoginCtrl">
+
+
+    <h2>登录</h2>
+    <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1">用户名</span>
+        <input type="text" class="form-control" placeholder="用户名" aria-describedby="basic-addon1"
+               ng-model="loginPost.username">
+    </div>
+    <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1">密码</span>
+        <input type="password" class="form-control" placeholder="密码" aria-describedby="basic-addon1"
+               ng-model="loginPost.password">
+    </div>
+    <!--
+      <div class="checkbox">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    -->
+    <button class="btn btn-primary btn-block" type="submit" ng-click="submit()">登录</button>
+
+
+</div>

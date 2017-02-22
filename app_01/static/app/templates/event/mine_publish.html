@@ -1,0 +1,42 @@
+<div class="container-fluid" id="event_list">
+    <section class="title_bar">
+        <a href="#/events/mine_published"
+           ng-class="{'published': 'half_btn_selected'}[page]" class="half_btn left">我发布的</a>
+
+        <a href="#/events/mine_joined"
+           ng-class="{'joined': 'half_btn_selected'}[page]" class="half_btn right">我参加的</a>
+    </section>
+    <div ng-include="alert_url"></div>
+    <section class="event_list">
+        <ul>
+            <li class="event_item" ng-repeat="event in events" ng-click="to_event_show(event.id)">
+                <header class="">
+                    <a class="category">
+                        <img src="/static/app/img/icons/{{event.category_img}}.png">
+                        {{event.category}}
+                    </a>
+
+                    <p class="club_tag">
+                        <a>{{event.club.name}}</a>
+                        <img src="{{event.club.logo_url}}">
+                    </p>
+                    <p style="padding:10px;">{{event.name}}</p>
+                    <p style="padding:2px;color: #f7bf4b">{{event.status}}</p>
+                </header>
+
+                <aside>
+                    <p class="state">{{event.state}}</p>
+                    <p class="mm"><img src="/static/app/img/icons/活动时间.png">{{event.time_str}} </p>
+                    <p class="mm"><img src="/static/app/img/icons/活动地点.png">{{event.venue.title}} </p>
+                </aside>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="{{event.members_count}}"
+                         aria-valuemin="0" aria-valuemax="{{event.members_count_limit}}"
+                         style="width: {{event.percent}}%">
+                    </div>
+                    <p class="progress_font">{{event.members_count}}/{{event.members_count_limit}}人</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+</div>

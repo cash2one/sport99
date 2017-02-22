@@ -1,0 +1,16 @@
+<div class="container-fluid" id="club_members">
+    <p class="m_label">俱乐部部长</p>
+    <ul>
+        <li class="member" ng-repeat="member in managers">
+            <img src="{{member.head_url}}">
+            <span class="name">{{member.nick}}</span>
+        </li>
+    </ul>
+    <p class="m_label">队员</p>
+    <ul>
+        <li class="member" ng-repeat="member in members">
+            <img src="{{member.head_url}}">
+            <span class="name">{{member.nick}}</span>
+        </li>
+    </ul>
+</div>

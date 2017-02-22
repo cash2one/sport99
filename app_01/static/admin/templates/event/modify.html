@@ -1,0 +1,155 @@
+<div class="container-fluid">
+    <div class="row">
+        <div ng-include="'/static/admin/templates/event/sidebar.html'"></div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <div class="container-fluid">
+
+                <div>
+                    <h2 class="sub-header">修改活动</h2>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">活动项目</span>
+                        <input type="text" class="form-control" placeholder="活动项目(必选)" aria-describedby="basic-addon1"
+                               ng-model='event.category'>
+
+                        <div class="input-group-btn">
+                            <!--
+                            <button type="button" class="btn btn-default">Action</button>
+                            -->
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li ng-repeat="category in category_list_1"><a
+                                        ng-click="set_category(category)">{{ category }}</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li ng-repeat="category in category_list_2"><a
+                                        ng-click="set_category(category)">{{ category }}</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">活动名称</span>
+                        <input type="text" class="form-control" placeholder="活动名称" aria-describedby="basic-addon1"
+                               ng-model='event.name'>
+                    </div>
+
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">活动类型</span>
+                        <div class="radio" aria-describedby="basic-addon1">
+                            <label>
+                                <input type="radio" name="event_type" ng-value=false ng-model="event.is_cycle"/> 单次活动
+                            </label>
+                            <label>
+                                <input type="radio" name="event_type" ng-value=true ng-model="event.is_cycle"/> 周期活动
+                            </label>
+                        </div>
+                    </div>
+
+                    <div ng-hide="event.is_cycle"><!-- 单次活动 -->
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">开始时间</span>
+                            <input type="datetime-local" class="form-control" placeholder="开始时间"
+                                   aria-describedby="basic-addon1"
+                                   ng-model='event.start_time'>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">结束时间</span>
+                            <input type="datetime-local" class="form-control" placeholder="结束时间"
+                                   aria-describedby="basic-addon1"
+                                   ng-model='event.end_time'>
+                        </div>
+                    </div>
+
+                    <div ng-hide="!event.is_cycle"><!-- 周期活动 -->
+
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">活动周期</span>
+                            <div aria-describedby="basic-addon1">
+                                <label class="checkbox-inline" ng-repeat="day in days">
+                                    <input type="checkbox" aria-describedby="basic-addon1"
+                                           ng-model='day.model'> {{ day.text }}
+                                </label>
+                            </div>
+
+                        </div>
+
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">开始时间</span>
+                            <input type="time" class="form-control" placeholder="开始时间"
+                                   aria-describedby="basic-addon1"
+                                   ng-model='event.start_time'>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">结束时间</span>
+                            <input type="time" class="form-control" placeholder="结束时间"
+                                   aria-describedby="basic-addon1"
+                                   ng-model='event.end_time'>
+                        </div>
+                    </div>
+
+
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">集合地点</span>
+                        <input type="text" class="form-control" placeholder="集合地点" aria-describedby="basic-addon1"
+                               ng-model='event.venue.title'>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">集合地址</span>
+                        <input type="text" class="form-control" placeholder="集合地址" aria-describedby="basic-addon1"
+                               ng-model='event.venue.address'>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">是否AA</span>
+                        <div class="checkbox" aria-describedby="basic-addon1">
+                            <label>
+                                <input type="checkbox" aria-describedby="basic-addon1"
+                                       ng-model='event.is_aa'> AA制
+                            </label>
+                        </div>
+                    </div>
+                    <div class="input-group" ng-hide="event.is_aa">
+                        <span class="input-group-addon" id="basic-addon1">活动费用</span>
+                        <input type="number" class="form-control" placeholder="活动费用" aria-describedby="basic-addon1"
+                               ng-model='event.fee'>
+                    </div>
+
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">活动人数</span>
+                        <input type="number" class="form-control" placeholder="活动人数" aria-describedby="basic-addon1"
+                               ng-model='event.members_count_limit'>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">场地号</span>
+                        <input type="text" class="form-control" placeholder="场地号" aria-describedby="basic-addon1"
+                               ng-model='event.place_num'>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">手机号</span>
+                        <input type="tel" class="form-control" placeholder="手机号" aria-describedby="basic-addon1"
+                               ng-model='event.mobile'>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">备注</span>
+                        <input type="text" class="form-control" placeholder="备注" aria-describedby="basic-addon1"
+                               ng-model='event.introduce'>
+                    </div>
+                    <!---
+                   <div class="qq">
+                       发布到QQ群：<span class="qq_span">2404237656<input type="checkbox"></span>
+                       <span class="qq_span">123456789<input type="checkbox"></span>
+                       <span class="qq_span">987654321<input type="checkbox"></span>
+                   </div>
+                   -->
+                    <button class="btn btn-primary btn-block" type="submit" ng-click="submit()">修改</button>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,18 @@
+<div class="container-fluid step2" id="club_create">
+    <form name="new_club" method="post" class="m_form" ng-submit="submit()">
+        <fieldset>
+
+            <label class="m_label">请输入你要绑定的QQ号</label>
+            <input name="qq" class="m_input qq" type="text" placeholder="您的QQ号"
+                   ng-model="bind_qq"  ng-trim="true" ng-required="true" ngMinlength="1">
+
+            <input class="next" type="submit" value="下一步">
+        </fieldset>
+    </form>
+    <p class="page_num">
+        <span class="selected">1</span>
+        <span>2</span>
+        <span>3</span>
+    </p>
+
+</div>

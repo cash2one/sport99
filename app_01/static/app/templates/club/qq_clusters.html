@@ -1,0 +1,21 @@
+<div class="container-fluid club_create" id="qq_clusters">
+    <label>已添加的QQ群</label>
+    <ul>
+        <li class="cluster" ng-repeat="cluster in clusters">
+            <span class="name">{{cluster.name}}</span>:
+            <span class="num">{{cluster.external_id}}</span>
+        </li>
+
+    </ul>
+    <form name="new_club" method="post" class="m_form" ng-submit="submit()">
+        <fieldset>
+            <input class="next" type="submit" value="完成">
+        </fieldset>
+    </form>
+    <p class="page_num">
+        <span class="selected">1</span>
+        <span class="selected">2</span>
+        <span>3</span>
+    </p>
+
+</div>

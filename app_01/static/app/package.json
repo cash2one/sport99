@@ -1,0 +1,26 @@
+{
+  "name": "yundong99",
+  "version": "2.3.15",
+  "description": "\"上线前\"",
+  "main": "app1.js",
+  "dependencies": {
+    "grunt": "^0.4.5"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-less": "^1.2.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-css": "^0.5.4"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "yundongjiujiu"
+  ],
+  "author": "Van",
+  "license": "ISC"
+}

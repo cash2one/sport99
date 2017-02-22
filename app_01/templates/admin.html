@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="adminApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="mingz">
+    <link rel="icon" href="{{ url_for('static', filename='admin/favicon.ico') }}">
+
+    <title>运动九九后台管理系统</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='admin/frames/bootstrap-3.3.5-dist/css/bootstrap.css') }}">
+    <script type="text/javascript"
+            src="{{ url_for('static', filename='admin/frames/jquery-2.2.3.js') }}"></script>
+    <script type="text/javascript"
+            src="{{ url_for('static', filename='admin/frames/bootstrap-3.3.5-dist/js/bootstrap.js') }}"></script>
+    <!-- angularjs -->
+    <script type="text/javascript"
+            src="{{ url_for('static', filename='admin/frames/angular-1.5.5/angular.js') }}"></script>
+    <script type="text/javascript"
+            src="{{ url_for('static', filename='admin/frames/angular-1.5.5/angular-route.js') }}"></script>
+    <script type="text/javascript"
+            src="{{ url_for('static', filename='admin/frames/angular-1.5.5/angular-animate.js') }}"></script>
+    <!--
+    <script type="text/javascript" src="{{ url_for('static', filename='admin/frames/angular-ui-router.js') }}"></script>
+    -->
+    <!-- momentjs -->
+    <script type="text/javascript" src="{{ url_for('static', filename='admin/frames/moment.js') }}"></script>
+    <!-- admin -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin/css/admin.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='admin/controllers/login.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='admin/controllers/club.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='admin/controllers/event.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='admin/app.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='admin/route.js') }}"></script>
+
+</head>
+
+<body>
+
+<div ng-include="'/static/admin/templates/widgets/navbar.html'"></div>
+
+<div class="container-fluid">
+    <div ng-view></div>
+</div>
+
+
+</body>
+</html>

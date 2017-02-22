@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="app">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>运动九九</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='app/node_modules/bootstrap/dist/css/bootstrap.css') }}">
+    <link rel="stylesheet/less" type="text/css" href="{{ url_for('static', filename='app/less/style.less') }}">
+    <!-- 对话框 -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='app/node_modules/ng-dialog/css/ngDialog.min.css') }}">
+
+    <script type="text/javascript" src="{{ url_for('static', filename='app/node_modules/jquery/dist/jquery.min.js') }}"></script>
+
+    <!-- less 样式解析 测试环境 -->
+    <script type="text/javascript" src="{{ url_for('static', filename='app/node_modules/less/dist/less.min.js') }}"></script>
+    <!-- 上传图片需要 -->
+    <script type="text/javascript" src="{{ url_for('static', filename='app/node_modules/plupload/js/plupload.full.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app/node_modules/qiniu/src/qiniu.js') }}"></script>
+    <!--script type="text/javascript" src="{{ url_for('static', filename='app/upload.js') }}"></script-->
+    <!-- angularJs -->
+    <script type="text/javascript" src="{{ url_for('static', filename='app/node_modules/angular/angular.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app/node_modules/angular-route/angular-route.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app/node_modules/angular-cookies/angular-cookies.min.js') }}"></script>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='app/node_modules/ng-dialog/js/ngDialog.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app/node_modules/moment/moment.js') }}"></script>
+    <!--<script type="text/javascript" src="{{ url_for('static', filename='lib/angular-datepicker/dist/angular-datepicker.js') }}"></script>-->
+    <!-- 微信SDK -->
+    <!--<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>-->
+    <!-- 应用代码 -->
+
+    <!--<script type="text/javascript" src="{{ url_for('static', filename='app/controllers/base_controller.js') }}"></script>-->
+    <script type="text/javascript" src="{{ url_for('static', filename='app/controllers/event.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app/controllers/club.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app/controllers/user.js') }}"></script>
+    <!--<script type="text/javascript" src="{{ url_for('static', filename='app/controllers/tools_controller.js') }}"></script>-->
+    <script type="text/javascript" src="{{ url_for('static', filename='app/app.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app/route.js') }}"></script>
+
+    <!-- 腾讯地图 -->
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=MgAVEr6ayBzs3rGNfWI80zHv" type="text/javascript"></script>
+</head>
+
+<body ng-view>
+
+
+</body>
+
+</html>
+
+

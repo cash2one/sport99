@@ -1,0 +1,25 @@
+<div class="container-fluid club_create" id="club_create">
+    <header class="" id="upload_container">
+
+        <a id="logo_img" style="background-image:url('static/app/img/icons/Group.png')"></a>
+        <p>添加俱乐部徽章</p>
+        <p class="radius_line"><span class="radius"></span></p>
+        <a class="edit" ng-click="bg_img_set()"><span class="glyphicon glyphicon-edit"></span></a>
+    </header>
+    <form name="new_club" method="post" class="m_form">
+        <fieldset>
+
+            <label class="m_label">俱乐部名称</label>
+            <input name="name" class="m_input" type="text" placeholder="俱乐部名称"
+                   ng-model="club.name"  ng-trim="true" ng-required="true" ngMinlength="1">
+
+            <label class="m_label">运动项目标签</label>
+            <!--<input name="category" class="m_input" type="text" placeholder="请选择运动项目"-->
+                   <!--ng-click="category_pick()" ng-model="club.tags"  ng-trim="true" ng-required="true" ngMinlength="1">-->
+            <p class="m_line" ng-click="category_pick()">
+                {{club.tags}}
+            </p>
+            <input class="next" type="submit" ng-click="submit()" value="完成">
+        </fieldset>
+    </form>
+</div>

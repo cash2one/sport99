@@ -1,0 +1,37 @@
+<div class="container-fluid">
+    <div class="row">
+        <div ng-include="'/static/admin/templates/club/sidebar.html'"></div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <div class="container-fluid">
+
+                <div>
+                    <h2 class="sub-header">修改俱乐部</h2>
+                    <h4>用户</h4>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">手机号</span>
+                        <input type="tel" class="form-control" placeholder="手机号" aria-describedby="basic-addon1"
+                               ng-model='user_and_club.mobile'>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">昵称</span>
+                        <input type="text" class="form-control" placeholder="昵称" aria-describedby="basic-addon1"
+                               ng-model="user_and_club.nickname">
+                    </div>
+                    <h4>俱乐部</h4>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">俱乐部名称</span>
+                        <input type="text" class="form-control" placeholder="俱乐部名称" aria-describedby="basic-addon1"
+                               ng-model='user_and_club.club_name'>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">俱乐部标签</span>
+                        <input type="text" class="form-control" placeholder="俱乐部标签" aria-describedby="basic-addon1"
+                               ng-model="user_and_club.tags">
+                    </div>
+                    <button class="btn btn-primary btn-block" type="submit" ng-click="submit()">修改</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

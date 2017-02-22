@@ -1,0 +1,56 @@
+<div class="container-fluid" id="user_update">
+    <section class="title_bar">
+        <a href class="back" ng-click="closeThisDialog()">取消
+        </a>
+        <span class="page_name">修改信息</span>
+        <a href class="option" ng-click="closeThisDialog(2)">确定</a>
+    </section>
+    <form class="m_form">
+    <ul ng-switch="update_filed">
+        <li class="" ng-switch-when="head_img_url">
+            <label class="m_label">头像</label>
+            <input class="" type="text">
+        </li>
+        <li class="" ng-switch-when="nickname">
+            <label class="m_label">修改昵称</label>
+            <input class="m_input" type="text" placeholder="10个字符以内"
+                   ng-model="update_value" ng-change="change(update_value)">
+        </li>
+        <li class="" ng-switch-when="sex">
+            <label class="m_label">性别</label>
+            <a class="sex" ng-class="{'男': 'selected'}[update_value]" ng-click="sex_set('男')">男</a>
+            <a class="sex" ng-class="{'女': 'selected'}[update_value]" ng-click="sex_set('女')">女</a>
+        </li>
+        <li class="" ng-switch-when="interest">
+            <label class="m_label">爱好</label>
+            <input class="m_input" type="text" placeholder="20个字符以内"
+                   ng-model="update_value" ng-change="change(update_value)">
+        </li>
+        <li class="" ng-switch-when="height">
+            <label class="m_label">身高</label>
+            <input class="m_input" type="number"
+                   ng-model="update_value" ng-change="change(update_value)">
+        </li>
+        <li class="" ng-switch-when="weight">
+            <label class="m_label">体重</label>
+            <input class="m_input" type="number"
+                   ng-model="update_value" ng-change="change(update_value)">
+        </li>
+        <li class="" ng-switch-when="mobile">
+            <label class="m_label">手机</label>
+            <input class="m_input" type="tel"
+                   ng-model="update_value" ng-change="change(update_value)">
+        </li>
+        <li class="" ng-switch-when="qq">
+            <label class="m_label">QQ</label>
+            <input class="m_input" type="text"
+                   ng-model="update_value" ng-change="change(update_value)">
+        </li>
+        <li class="" ng-switch-when="email">
+            <label class="m_label">邮箱</label>
+            <input class="m_input" type="email"
+                   ng-model="update_value" ng-change="change(update_value)">
+        </li>
+    </ul>
+    </form>
+</div>

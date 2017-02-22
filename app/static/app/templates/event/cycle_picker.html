@@ -1,0 +1,14 @@
+<div class="container-fluid category_picker" id="category_picker">
+    <section class="category_list">
+        <ul>
+            <li ng-repeat="day in days" ng-click="append_day(day.id)">
+                <a ng-class="has_me(day.id)"  href>{{ day.day }}</a>
+            </li>
+        </ul>
+    </section>
+
+    <a class="next" ng-class="{true: 'btn_enable', false: 'btn_disable'}[next_state]"
+           ng-click="finish()" ng-enabled="next_state">确定</a>
+
+
+</div>

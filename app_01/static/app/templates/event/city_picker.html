@@ -1,0 +1,29 @@
+<div class="container-fluid" id="city_picker">
+    <!--<form name="city_search" method="post" class="m_form" ng-submit="search()">-->
+
+        <!--<input name="search_value" class="m_input" type="text" placeholder="城市中文名或者拼音" ng-click="category_pick()"-->
+               <!--ng-model="event.category" ng-change="checkNextEnable()" ng-trim="true" ng-required="true" ngMinlength="1">-->
+    <!--</form>-->
+    <p class="cur_city">当前定位城市：{{cur_city}}</p>
+    <!--<label><img src="/static/app/img/icons/Star 1.png"> </label>-->
+
+    <ul class="city_list">
+        <li>
+            <label class="city_label"><span class="glyphicon glyphicon-star"></span>热门城市</label>
+            <ul class="">
+                <li class="city" ng-repeat="city in main_cities">
+                      <a ng-click="closeThisDialog(city)">{{city}}</a>
+                </li>
+            </ul>
+        </li>
+        <li ng-repeat="city_d in cities">
+            <label class="city_label">{{city_d.initial}}</label>
+            <ul>
+                <li class="city" ng-repeat="city in city_d.cities">
+                    <a ng-click="closeThisDialog(city.name)">{{city.name}}</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+</div>

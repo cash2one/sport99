@@ -1,0 +1,43 @@
+<div class="container-fluid" id="club_members">
+    <div ng-include="alert_url"></div>
+    <p class="m_label">组织者</p>
+    <ul>
+        <li class="member" ng-repeat="member in managers">
+
+            <img src="{{member.head_img_url}}">
+            <span class="name">{{member.nickname}}</span>
+        </li>
+    </ul>
+    <p class="m_label">队员</p>
+    <ul>
+        <li class="member " ng-click="toggle_select(member.id,member.nickname)" ng-repeat="member in members">
+            <a class="icon" ng-class="has_select(member.id,member.nickname)"></a>
+            <img src="{{member.head_img_url}}">
+            <span class="name">{{member.nickname_alia}}</span>
+        </li>
+    </ul>
+
+    <section class="options">
+        <a class="next1" ng-click="add_picker()">增加队员</a>
+        <a class="next2" ng-click="remove()">删除队员</a>
+    </section>
+
+</div>
+<script type="text/ng-template" id="remove">
+    <div class="alert_card">
+        <p>确定取消他们的报名资格吗</p>
+        <p class="btns">
+            <a class="cancel" ng-click="closeThisDialog('no')">取消</a>
+            <a class="finish" ng-click="closeThisDialog('yes')">确定</a>
+        </p>
+    </div>
+</script>
+<script type="text/ng-template" id="add">
+    <div class="ccm">
+        <form class="form">
+            <input class="name" type="text" ng-model="name" placeholder="增加人名称">
+            <input class="mate_count" type="number" min="0"  ng-model="mate_count" placeholder="外带人数">
+            <input class="next000" type="submit" value="确定" ng-click="closeThisDialog({'name':name, 'mate_count':mate_count})">
+        </form>
+    </div>
+</script>

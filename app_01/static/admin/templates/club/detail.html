@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="row">
+        <div ng-include="'/static/admin/templates/club/sidebar.html'"></div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <div class="container-fluid">
+
+                <div>
+                    <h2 class="sub-header">俱乐部详情</h2>
+                    <h4>用户</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item">手机号：<span> {{ user_and_club.mobile }}</span></li>
+                        <li class="list-group-item">昵称：<span>{{ user_and_club.nickname }}</span></li>
+                    </ul>
+                    <h4>俱乐部</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item">俱乐部名称：<span>{{ user_and_club.club_name }}</span></li>
+                        <li class="list-group-item">俱乐部标签：<span>{{ user_and_club.tags }}</span></li>
+                    </ul>
+                    <button class="btn btn-primary" type="submit" ng-click="event_create()">发布活动</button>
+                    <button class="btn btn-primary" type="submit" ng-click="club_modify(user_and_club.club_id)">修改俱乐部
+                    </button>
+                    <button class="btn btn-primary" type="submit" ng-click="club_events(user_and_club.club_id)">
+                        查看当前俱乐部活动
+                    </button>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,69 @@
+<div class="container-fluid" id="user_show">
+    <div ng-include="alert_url"></div>
+    <ul>
+        <li class="line" ng-click="">
+            <span class="m_label">头像</span>
+            <a class="right right_part">
+                <img class="head_img" ng-src="{{user.head_img_url}}">
+                <!--<span class="glyphicon glyphicon-menu-right"></span>-->
+            </a>
+        </li>
+        <li class="line" ng-click="to_update('nickname')">
+            <span class="m_label">昵称</span>
+            <a class="right right_part">
+                {{user.nickname}}
+                <span class="glyphicon glyphicon-menu-right"></span>
+            </a>
+        </li>
+        <li class="line" ng-click="to_update('sex')">
+            <span class="m_label">性别</span>
+            <a class="right right_part">
+                {{user.sex}}
+                <span class="glyphicon glyphicon-menu-right"></span>
+            </a>
+        </li>
+        <li class="line" ng-click="to_update('interest')">
+            <span class="m_label">爱好</span>
+            <a class="right right_part">
+                {{user.interest}}
+                <span class="glyphicon glyphicon-menu-right"></span>
+            </a>
+        </li>
+        <li class="line" ng-click="to_update('height')">
+            <span class="m_label">身高</span>
+            <a class="right right_part">
+                {{user.height}}cm
+                <span class="glyphicon glyphicon-menu-right"></span>
+            </a>
+        </li>
+        <li class="line" ng-click="to_update('weight')">
+            <span class="m_label">体重</span>
+            <a class="right right_part">
+                {{user.weight}}kg
+                <span class="glyphicon glyphicon-menu-right"></span>
+            </a>
+        </li>
+        <li class="line" ng-click="to_update('mobile')">
+            <span class="m_label">手机</span>
+            <a class="right right_part">
+                {{user.mobile}}
+                <span class="glyphicon glyphicon-menu-right"></span>
+            </a>
+        </li>
+        <li class="line" ng-click="to_update_qq('qq')">
+            <span class="m_label">QQ号</span>
+            <a class="right right_part">
+                {{user.qq}}
+                <span class="glyphicon glyphicon-menu-right"></span>
+            </a>
+        </li>
+        <li class="line" ng-click="to_update('email')">
+            <span class="m_label">邮箱</span>
+            <a class="right right_part">
+                {{user.email}}
+                <span class="glyphicon glyphicon-menu-right"></span>
+            </a>
+        </li>
+    </ul>
+    <input class="next" type="submit" value="确定" ng-click="finish()">
+</div>

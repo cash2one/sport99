@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="app">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>运动九九</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <!-- 对话框 -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='app/dist/yundong99.min.2.3.15.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='app/dist/yundong99.min.2.3.29.js') }}"></script>
+    <!-- 微信SDK -->
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <!-- 腾讯地图 -->
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=MgAVEr6ayBzs3rGNfWI80zHv" type="text/javascript"></script>
+</head>
+
+<body ng-view>
+
+</body>
+
+</html>

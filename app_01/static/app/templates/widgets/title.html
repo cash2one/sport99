@@ -1,0 +1,10 @@
+<section class="title_bar">
+    <a href class="back" ng-click="back()" ng-hide="is_back_hide">
+        <span ng-show="back_text_show">取消</span>
+        <span class="glyphicon glyphicon-menu-left" ng-hide="back_text_show"></span>
+    </a>
+    <span class="page_name" ng-bind="page_name">{{ page_name }}</span>
+    <a href class="option" ng-click="option()" ng-show="option_enable">
+        <span class="glyphicon glyphicon-option-horizontal"></span>
+    </a>
+</section>

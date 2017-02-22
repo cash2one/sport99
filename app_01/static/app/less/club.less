@@ -1,0 +1,387 @@
+.club_create{
+    >header{
+        position: relative;
+        min-height: 168px;
+        padding-top: 30px;
+        text-align: center;
+
+        color: #fff;
+        background-size: 100%;
+        background-image: url("/static/app/img/bgimgs/club/p2.png");
+        #logo_img{
+            display: inline-block;
+            width: 75px;
+            height: 75px;
+            border-radius: 100%;
+            background-size: 100%;
+        }
+        p{
+            padding: 10px;
+            font-size: 16px;
+            color: #fff;
+        }
+        .edit{
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            color: #eee;
+        }
+        .radius_line{
+            position: absolute;
+            width: 100%;
+            height:0px;
+            left: 0px;
+            bottom: 0px;
+            text-align: center;
+
+            .radius{
+                position: relative;
+                top: -20px;
+                border-left: solid 16px transparent;
+                border-right: solid 16px transparent;
+                border-bottom: solid 14px #f0f0f0;
+            }
+        }
+    }
+    .img_list{
+            text-align: center;
+            width: 100%;
+            li{
+                width: 30%;
+                display: inline-block;
+                margin: 5px;
+                img{
+                    width: 100%;
+                    height: 110px
+                }
+            }
+
+    }
+    .qq{
+        color: #FF9800;
+        text-align: center;
+        background: #fff;
+    }
+    .m_line{
+        color: #999;
+        background-color: #FFF;
+        padding: 12px;
+        margin-top: 10px;
+    }
+    .next{
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+        width: 100%;
+        padding: 10px;
+        color: #fff;
+        background-color: #FFC107;
+        text-align: center;
+        border: none;
+    }
+    .page_num{
+        position: fixed;
+        bottom: 60px;
+        width: 100%;
+        text-align: center;
+        span{
+            display: inline-block;
+            line-height: 24px;
+            width: 24px;
+            height: 24px;
+            border-radius: 12px;
+            background-color: #ddd;
+            margin: 5px;
+        }
+        .selected{
+            background-color: #fff;
+        }
+    }
+    .alert_card{
+        position: fixed;
+        top: 120px;
+        left: 10%;
+        width: 80%;
+        height: 140px;
+        padding-top: 30px;
+        background-color: #FFB40B;
+        text-align: center;
+        p, a{
+            color: #fff;
+        }
+        .btns{
+            position: absolute;
+            bottom:0px;
+            left:0px;
+            width: 100%;
+
+
+            text-align: center;
+            a{
+                display: inline-block;
+                width: 49%;
+                padding: 10px;
+                text-align: center;
+                background-color: #FFC107;
+            }
+        }
+    }
+
+}
+
+
+
+.head_bg_picker{
+    background-color: #0e0e0e;
+    height: 100%;
+}
+.step2{
+    padding-top: 100px;
+    .qq{
+        text-align: center;
+    }
+}
+.qq_cluster{
+    padding: 15px;
+}
+#club_members{
+    .m_label{
+        padding: 10px;
+    }
+    .member{
+        padding: 10px;
+        background-color: #fff;
+        img{
+            width: 30px;
+            border-radius: 15px;
+        }
+        .icon{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-image: url("/static/app/img/icons/noselected.png");
+            background-size: 100%;
+            margin-bottom: -8px;
+            margin-right: 5px;
+        }
+        .selected{
+            background-image: url("/static/app/img/icons/selected.png");
+        }
+    }
+    .next{
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+        width: 100%;
+        padding: 10px;
+        color: #fff;
+        background-color: #FFC107;
+        text-align: center;
+        border: none;
+    }
+    .next1{
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+        width: 49.5%;
+        padding: 10px;
+        color: #fff;
+        background-color: #FFC107;
+        text-align: center;
+        border: none;
+    }
+    .next2{
+        position: fixed;
+        right: 0px;
+        bottom: 0px;
+        width: 49.5%;
+        padding: 10px;
+        color: #fff;
+        background-color: #FFC107;
+        text-align: center;
+        border: none;
+    }
+
+}
+.add_member_picker{
+    .ngdialog-content{
+        position: fixed;
+        top: 180px;
+        left: 10%;
+        width: 80%;
+        background: #f7bf4b;
+        .ccm{
+            padding: 40px 10px;;
+            height: 140px
+        }
+        input{
+            display: inline-block;
+            font-size: 14px;
+            border: solid 1px #fff;
+            padding: 5px;
+        }
+        .name{
+            width: 58%;
+        }
+        .mate_count{
+            width: 40%;
+            float: right;
+        }
+        .next000{
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            width: 100%;
+            padding: 10px;
+            color: #fff;
+            background-color: #FFC107;
+            text-align: center;
+            border: none;
+        }
+    }
+    .ngdialog-close{
+        display: none;
+    }
+
+}
+
+#club_show{
+    padding-bottom: 45px;
+    >header{
+        position: relative;
+        min-height: 168px;
+        padding: 30px;
+        text-align: center;
+
+        color: #fff;
+        //background-image: url("/static/app/img/bgimgs/club/p2.png");
+        background-size: 100%;
+        img{
+            width: 75px;
+            margin-bottom: 10px;
+            border-radius: 48px;
+        }
+        .name{
+            font-size: 16px;
+            font-weight: 600;
+        }
+        p{
+            color: #fff;
+        }
+    }
+    .members{
+        padding: 10px;
+        background-color: #fff;
+        .m_label{
+            img{
+                width: 20px;
+                margin-right: 10px;
+            }
+        }
+    }
+    .events{
+        header{
+            padding: 10px;
+        }
+        background-color: #f9f9f9;
+        .m_label{
+            img{
+                width: 20px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .next{
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+        width: 100%;
+        padding: 10px;
+        color: #fff;
+        background-color: #FFC107;
+        text-align: center;
+        border: none;
+    }
+}
+
+#mine_clubs{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    header{
+        position: relative;
+        border-bottom: solid 1px rgb(251, 251, 251);
+        background-color: #F0F0F0;
+        .add_club{
+            position: relative;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            .plus{
+                font-size: 30px;
+            }
+        }
+    }
+
+    li{
+        position: relative;
+        overflow-x: scroll;
+        background-color: #FFF;
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        .cancel{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            color: #fff;
+            background: #f6623d;
+            top: 0px;
+            right: -100px;
+            padding-top: 30px;
+            text-align: center;
+            p, span, a{
+                color: #fff;
+            }
+            .glyphicon{
+                font-size: 1.5em;
+            }
+        }
+    }
+    .club_info{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        padding: 10px 15px;
+        z-index: 10;
+
+        .name{
+            position: absolute;
+            top: 30px;
+            left: 108px;
+            color: #444;
+        }
+        img{
+            position: relative;
+            width: 80px;
+            height: 80px;
+            border-radius: 40px;
+        }
+        .tags{
+            position: absolute;
+            left: 110px;
+            top: 65px;
+            font-size: 12px;
+            color: #888;
+            span{
+                margin-right: 5px;
+            }
+        }
+    }
+
+}
+

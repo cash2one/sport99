@@ -1,0 +1,44 @@
+<div class="container-fluid" id="event_list">
+    <section class="title_bar">
+        <a href class="back" ng-click="city_pick()">
+            {{city_selected}}
+            <span class="glyphicon glyphicon-menu-down"></span>
+        </a>
+
+        <a href class="option" ng-click="filter_pick()">筛选
+            <span class="glyphicon glyphicon-menu-down"></span>
+        </a>
+    </section>
+    <div ng-include="alert_url"></div>
+    <section class="event_list">
+        <ul>
+            <li class="event_item" ng-repeat="event in events" ng-click="to_event_show(event.id)">
+                <header class="">
+                    <a class="category">
+                        <img src="/static/app/img/icons/{{event.category}}.png">
+                        {{event.category}}
+                    </a>
+
+                    <p class="club_tag">
+                        <a>{{event.club.name}}</a>
+                        <img src="{{event.club.logo_url}}">
+                    </p>
+                    <p style="padding:10px;">{{event.name}}</p>
+                </header>
+
+                <aside>
+                    <p class="state">{{event.status}}</p>
+                    <p><span class="glyphicon glyphicon-time"></span>{{event.start_time}} </p>
+                    <p><span class="glyphicon glyphicon-map-marker"></span>{{event.venue.name}} </p>
+                </aside>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="{{event.member_count}}"
+                         aria-valuemin="0" aria-valuemax="{{event.member_count_limit}}"
+                         style="width: {{event.percent}}">
+                    </div>
+                    <p class="progress_font">{{event.member_count}}/{{event.member_count_limit}}人</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+</div>

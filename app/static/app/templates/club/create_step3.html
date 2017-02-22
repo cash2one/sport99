@@ -1,0 +1,19 @@
+<div class="container-fluid step2" id="club_create">
+    <form name="new_club" method="post" class="m_form" ng-submit="submit()">
+        <fieldset>
+            <label class="m_label">以下QQ是我们的机器人“小九”, 你需要添加他添加为好友。并且邀请到你的QQ群里,
+                发送验证码“YD99”。</label>
+            <input name="qq" class="m_input qq" type="text" placeholder="" readonly
+                   ng-model="qq"  ng-trim="true" ng-required="true" ngMinlength="1">
+            <!--<p class="m_line" ng-click="copy()">-->
+                <!--复制并跳转到QQ-->
+            <!--</p>-->
+            <input class="next" type="submit" value="完成">
+        </fieldset>
+    </form>
+    <p class="page_num">
+        <span class="selected">1</span>
+        <span class="selected">2</span>
+        <span>3</span>
+    </p>
+</div>

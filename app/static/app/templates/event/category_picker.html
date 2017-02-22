@@ -1,0 +1,25 @@
+<div class="container-fluid category_picker" id="category_picker">
+    <section class="category_list">
+        <p class="m_label">球类</p>
+        <ul>
+            <li ng-repeat="category in category_list_1" ng-click="closeThisDialog(category)">
+                <a href>{{ category }}</a>
+            </li>
+        </ul>
+        <p class="m_label">户外，聚会</p>
+        <ul>
+            <li ng-repeat="category in category_list_2" ng-click="closeThisDialog(category)">
+                <a href>{{ category }}</a>
+            </li>
+        </ul>
+        <p class="m_label">其他</p>
+        <form name="" method="post" class="m_form">
+            <input name="category" class="m_input" type="text" placeholder="输入6个字符以内运动项目名称"
+                   ng-model="category"  ng-change="checkNextEnable()" ng-trim="true" ng-required="true" ngMinlength="1">
+            <div class="submit_line">
+                <input class="next" ng-class="{true: 'btn_enable', false: 'btn_disable'}[next_state]"
+                       type="submit" value="确定" ng-click="closeThisDialog(category)" ng-enabled="next_state">
+            </div>
+        </form>
+    </section>
+</div>

@@ -1,0 +1,65 @@
+<div class="container-fluid">
+    <div class="row">
+        <div ng-include="'/static/admin/templates/event/sidebar.html'"></div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <div class="container-fluid">
+
+                <div>
+                    <h2 class="sub-header">活动详情</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">活动项目：<span>{{ event.category }}</span></li>
+                        <li class="list-group-item">活动名称：<span>{{ event.name }}</span></li>
+
+                        <div ng-hide="event.is_cycle">
+                            <li class="list-group-item">活动类型：<span>单次活动</span></li>
+
+                            <li class="list-group-item">
+                                开始时间：<span>{{ event.start_time * 1000 | date: 'yyyy-MM-dd HH:mm' }}</span>
+                            </li>
+                            <li class="list-group-item">
+                                结束时间：<span>{{ event.end_time * 1000 | date: 'yyyy-MM-dd HH:mm' }}</span>
+                            </li>
+                        </div>
+
+                        <div ng-hide="!event.is_cycle">
+                            <li class="list-group-item">活动类型：<span>周期活动</span></li>
+                            <li class="list-group-item">活动周期：<span ng-repeat="day in days"
+                                                                   ng-hide="!day.model"> {{ day.text }} </span></li>
+                            <li class="list-group-item">
+                                开始时间：<span>{{ event.start_time * 1000 | date: 'HH:mm' }}</span>
+                            </li>
+                            <li class="list-group-item">
+                                结束时间：<span>{{ event.end_time * 1000 | date: 'HH:mm' }}</span>
+                            </li>
+                        </div>
+
+                        <li class="list-group-item">集合地点：<span>{{ event.venue.title }}</span></li>
+                        <li class="list-group-item">集合地址：<span>{{ event.venue.address }}</span></li>
+
+                        <li class="list-group-item">是否AA: <span ng-hide="!event.is_aa"> 是 </span><span
+                                ng-hide="event.is_aa"> 否 </span></li>
+                        <li class="list-group-item" ng-hide="event.is_aa">活动费用：<span>{{ event.fee }}</span></li>
+                        <li class="list-group-item">活动人数：<span>{{ event.members_count_limit }}</span></li>
+                        <li class="list-group-item">场地号：<span>{{ event.place_num }}</span></li>
+                        <li class="list-group-item">联系方式：<span>{{ event.mobile }}</span></li>
+                        <li class="list-group-item">备注：<span>{{ event.introduce }}</span></li>
+                        <!---
+                           <div class="qq">
+                               发布到QQ群：<span class="qq_span">2404237656<input type="checkbox"></span>
+                               <span class="qq_span">123456789<input type="checkbox"></span>
+                               <span class="qq_span">987654321<input type="checkbox"></span>
+                           </div>
+                        -->
+                    </ul>
+
+                    <button class="btn btn-primary" type="submit" ng-click="event_delete(event.id)">删除</button>
+                    <button class="btn btn-primary" type="submit" ng-click="event_modify(event.id)">修改</button>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
